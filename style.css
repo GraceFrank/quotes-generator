@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Mukta:wght@200&display=swap");
 
 html {
   box-sizing: border-box;
@@ -10,18 +11,46 @@ body {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80' width='80' height='80'%3E%3Cpath fill='%23003994' fill-opacity='0.13' d='M14 16H9v-2h5V9.87a4 4 0 1 1 2 0V14h5v2h-5v15.95A10 10 0 0 0 23.66 27l-3.46-2 8.2-2.2-2.9 5a12 12 0 0 1-21 0l-2.89-5 8.2 2.2-3.47 2A10 10 0 0 0 14 31.95V16zm40 40h-5v-2h5v-4.13a4 4 0 1 1 2 0V54h5v2h-5v15.95A10 10 0 0 0 63.66 67l-3.47-2 8.2-2.2-2.88 5a12 12 0 0 1-21.02 0l-2.88-5 8.2 2.2-3.47 2A10 10 0 0 0 54 71.95V56zm-39 6a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm40-40a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM15 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm40 40a2 2 0 1 0 0-4 2 2 0 0 0 0 4z'%3E%3C/path%3E%3C/svg%3E");
   font-family: "Dancing Script", cursive;
   font-weight: 700;
-  color: #003aa0;
+  color: #06327f;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* #17035e */
 }
 
 .quote-container {
   width: auto;
   max-width: 900px;
   background: rgb(233, 253, 255, 0.5);
-  padding: 10px 50px;
+  padding: 20px 30px;
   box-shadow: 0px 10px 10px 5px rgb(0, 0, 0, 0.2);
+}
+
+.quote-text {
+  font-size: 3.75rem;
+}
+.long-quote {
+  font-size: 3rem;
+}
+
+.fa-quote-left {
+  font-size: 4rem;
+}
+
+.quote-author {
+  font-weight: 400;
+  margin-top: 15px;
+  font-size: 2rem;
+  font-family: "Mukta", sans-serif;
+}
+
+/* Media Query: Tablet or Smaller */
+
+@media screen and (max-width: 1000px) {
+  .quote-container {
+    margin: auto 20px;
+  }
+  .quote-text {
+    font-size: 2.75rem;
+  }
 }
