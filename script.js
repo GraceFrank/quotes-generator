@@ -5,18 +5,36 @@ const authorText = document.getElementById("author");
 const quoteText = document.getElementById("quote");
 const tweetButton = document.getElementById("tweet-button");
 const newQuoteButton = document.getElementById("new-quote-button");
+const quoteContainer = document.getElementById("quote-container");
+const loader = document.getElementById("loader");
+
+// show loading
+function loading() {
+  loader.hidden = false;
+  quoteContainer.hidden = true;
+}
+// Hide loading
+function loadingComplete() {
+  loader.hidden = true;
+  quoteContainer.hidden = false;
+}
 
 // Get Quotes From API
 async function getQuotes() {
-  const URL = "https://type.fit/api/quotes";
+  loading();
+  const URL = "https://type.fit/api/qutes";
 
   try {
     const response = await fetch(URL);
     quotes = await response.json();
     newQuote();
+    loadingComplete();
   } catch (err) {
+    // get new quotes from local if there was an error
     console.log(err);
     quotes = localQuotes;
+    newQuote();
+    loadingComplete();
   }
 }
 
